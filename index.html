@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- JavaScript to handle popup functionality -->
+<!-- JavaScript to handle popup functionality -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get the dialog and close button
+        const dialog = document.querySelector('.popup-content');
+        const closeButton = document.querySelector('.close-popup');
+
+        // Add click event listeners to your portfolio items
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        portfolioItems.forEach(item => {
+            item.addEventListener('click', function () {
+                // Get the title and description from the clicked portfolio item
+                const title = item.dataset.title;
+                const description = item.querySelector('.hidden-content');
+
+                // Set the content of the popup-inner based on the clicked portfolio item
+                document.getElementById('popup-title').innerText = title;
+                document.getElementById('popup-description').innerHTML = description.innerHTML;
+
+                // Show the dialog
+                dialog.showModal();
+            });
+        });
+
+        // Add click event listener to close button
+        closeButton.addEventListener('click', function () {
+            // Close the dialog when the close button is clicked
+            dialog.close();
+        });
+    });
+</script>
+<style>
+    .hidden-content{
+        display: none;
+    }
+    /* Center the dialog */
+    dialog {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: none;
+        padding: 20px;
+        background: #f7f7f7;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        z-index: 2; /* Ensure it's on top of other content */
+        text-align: justify;
+    }
+
+    /* Semi-transparent overlay */
+    dialog::backdrop {
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    /* Style for the popup content */
+    .popup-inner {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: justify;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Close button style */
+    .close-popup {
+        background: #3498db;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    /* Hover effect for close button */
+    .close-popup:hover {
+        background: #2980b9;
+    }
+
+    /* Add this to your CSS stylesheet */
+    .openPopup {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: chocolate;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .openPopup:hover {
+        background-color: red;
+    }
+</style>
+</head>
+<body class="main-content">
+    <header class="container header active" id="home">
+        <div class="header-content">
+            <div class="left-header">
+                <div class="h-shape"></div>
+                <div class="image">
+                    <img src="img/hero.jpg" alt="">
+                </div>
+            </div>
+            <div class="right-header">
+                <h1 class="name">
+                    Hi, I'm <span>Praveen Singh.</span>
+                    A Consulting Software Engineer.
+                </h1>
+                <p>
+                    I'm a Consulting Software Engineer. I am a skilled and results-oriented Software Engineer with a strong foundation
+                    in Machine Learning, specializing in Netural Language Processing (NLP) with Machine Learning (ML), Deep Learning (DL) and Transformer architecture. With 4 years of experience in the field of Machine Learning and Deep Learning,
+                    I have successfully contributed to various projects, demonstrating expertise in designing and implementing scalable software solutions that leverage the power of <b>Python</b>, <b>Java</b>, <b>React</b>, <b>.Net</b> and <b>XSLT</b> for solving complex problems from past 8 years.
+                </p>
+                <div class="btn-con">
+                    <a href="" class="main-btn">
+                        <span class="btn-text">Download CV</span>
+                        <span class="btn-icon"><i class="fas fa-download"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="container about" id="about">
+            <div class="main-title">
+                <h2>About <span>me</span><span class="bg-text">my stats</span></h2>
+            </div>
+            <div class="about-container">
+                <div class="left-about">
+                    <h4>Information About me</h4>
+                    <p>
+                        Being a software developer was a dream when I was a child, this aspiration always burns in my mind.<br/>
+                        All of projects have been written by it always makes me fascinated. Worked for 3 companies and participated different projects, but I think these results are never be enough. I am still looking for an ambitious company, which will challenge my skill and experience to find the passion in work
+                    </p>
+                    <div class="btn-con">
+                        <a href="#" class="main-btn">
+                            <span class="btn-text">Download CV</span>
+                            <span class="btn-icon"><i class="fas fa-download"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="right-about">
+                    <div class="about-item">
+                        <div class="abt-text">
+                            <p class="large-text">30+</p>
+                            <p class="small-text">Projects <br /> Completed</p>
+                        </div>
+                    </div>
+                    <div class="about-item">
+                        <div class="abt-text">
+                            <p class="large-text">13+</p>
+                            <p class="small-text">Years of <br /> experience</p>
+                        </div>
+                    </div>
+                    <!-- <div class="about-item">
+                        <div class="abt-text">
+                            <p class="large-text">300+</p>
+                            <p class="small-text">Happy <br /> Clients</p>
+                        </div>
+                    </div>
+                    <div class="about-item">
+                        <div class="abt-text">
+                            <p class="large-text">400+</p>
+                            <p class="small-text">Customer <br /> reviews</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="about-stats">
+                <h4 class="stat-title">My Skills</h4>
+                <div class="progress-bars">
+                    <h3 class="expandable-heading">
+                        <i class="fas fa-chevron-down"></i> Programming
+                    </h3>
+                    <div class="expandable-content" style="display: none;">
+                        <div class="progress-bar">
+                            <p class="prog-title">Python</p>
+                            <div class="progress-con">
+                                <p class="prog-text">95%</p>
+                                <div class="progress">
+                                    <span class="css"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <p class="prog-title">C#</p>
+                            <div class="progress-con">
+                                <p class="prog-text">90%</p>
+                                <div class="progress">
+                                    <span class="css"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <p class="prog-title">XSLT</p>
+                            <div class="progress-con">
+                                <p class="prog-text">95%</p>
+                                <div class="progress">
+                                    <span class="css"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="progress-bars">
+                    <h3 class="expandable-heading">
+                        <i class="fas fa-chevron-down"></i> AI & ML - Techcs
+                    </h3>
+                    <div class="expandable-content" style="display: none;">
+                        <div class="progress-bar">
+                            <p class="prog-title">Deep Learning</p>
+                            <div class="progress-con">
+                                <p class="prog-text">80%</p>
+                                <div class="progress">
+                                    <span class="css"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <p class="prog-title">Machine Learning</p>
+                            <div class="progress-con">
+                                <p class="prog-text">85%</p>
+                                <div class="progress">
+                                    <span class="css"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <p class="prog-title">MLOps</p>
+                            <div class="progress-con">
+                                <p class="prog-text">85%</p>
+                                <div class="progress">
+                                    <span class="css"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <p class="prog-title">NLP</p>
+                            <div class="progress-con">
+                                <p class="prog-text">80%</p>
+                                <div class="progress">
+                                    <span class="html"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <p class="prog-title">Time-Series</p>
+                            <div class="progress-con">
+                                <p class="prog-text">60%</p>
+                                <div class="progress">
+                                    <span class="html"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progress-bars">
+                    <h3 class="expandable-heading">
+                        <i class="fas fa-chevron-down"></i> AI & ML - Tools/Libs
+                    </h3>
+                    <div class="expandable-content" style="display: none;">
+                        <br/>
+                        <div class="progress-bar">
+                            <p class="prog-title">Spacy</p>
+                            <div class="progress-con">
+                                <p class="prog-text">80%</p>
+                                <div class="progress">
+                                    <span class="css"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <p class="prog-title">Flair</p>
+                            <div class="progress-con">
+                                <p class="prog-text">60%</p>
+                                <div class="progress">
+                                    <span class="css"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <p class="prog-title">PySpark</p>
+                            <div class="progress-con">
+                                <p class="prog-text">60%</p>
+                                <div class="progress">
+                                    <span class="css"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <p class="prog-title">NLTK</p>
+                            <div class="progress-con">
+                                <p class="prog-text">80%</p>
+                                <div class="progress">
+                                    <span class="html"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <p class="prog-title">Tansorflow</p>
+                            <div class="progress-con">
+                                <p class="prog-text">60%</p>
+                                <div class="progress">
+                                    <span class="html"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <p class="prog-title">Pytorch</p>
+                            <div class="progress-con">
+                                <p class="prog-text">70%</p>
+                                <div class="progress">
+                                    <span class="html"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-bars">
+                    <h3 class="expandable-heading">
+                        <i class="fas fa-chevron-down"></i> Genrative AI
+                    </h3>
+                    <div class="expandable-content" style="display: none;">
+                        <br/>
+                        <div class="progress-bar">
+                            <p class="prog-title">Prompt Engineering</p>
+                            <div class="progress-con">
+                                <p class="prog-text">80%</p>
+                                <div class="progress">
+                                    <span class="css"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <p class="prog-title">RAG</p>
+                            <div class="progress-con">
+                                <p class="prog-text">60%</p>
+                                <div class="progress">
+                                    <span class="css"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <p class="prog-title">Advance RAG</p>
+                            <div class="progress-con">
+                                <p class="prog-text">60%</p>
+                                <div class="progress">
+                                    <span class="css"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <p class="prog-title">Lang Chain</p>
+                            <div class="progress-con">
+                                <p class="prog-text">80%</p>
+                                <div class="progress">
+                                    <span class="html"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <p class="prog-title">Re-Ranking Cohere</p>
+                            <div class="progress-con">
+                                <p class="prog-text">60%</p>
+                                <div class="progress">
+                                    <span class="html"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <p class="prog-title">Fine Tuning - GPT3 Models</p>
+                            <div class="progress-con">
+                                <p class="prog-text">70%</p>
+                                <div class="progress">
+                                    <span class="html"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progress-bars">
+                    <h3 class="expandable-heading">
+                        <i class="fas fa-chevron-down"></i> Database
+                    </h3>
+                    <div class="expandable-content" style="display: none;">
+                        <br/>
+                        <div class="progress-bar">
+                            <p class="prog-title">MongoDB</p>
+                            <div class="progress-con">
+                                <p class="prog-text">80%</p>
+                                <div class="progress">
+                                    <span class="css"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <p class="prog-title">SQL</p>
+                            <div class="progress-con">
+                                <p class="prog-text">60%</p>
+                                <div class="progress">
+                                    <span class="css"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <p class="prog-title">Mark Logic</p>
+                            <div class="progress-con">
+                                <p class="prog-text">60%</p>
+                                <div class="progress">
+                                    <span class="css"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    const expandableHeadings = document.querySelectorAll('.expandable-heading');
+
+                    expandableHeadings.forEach((heading) => {
+                        heading.addEventListener('click', () => {
+                            const content = heading.nextElementSibling;
+                            content.style.display = content.style.display === 'none' ? 'block' : 'none';
+                            heading.querySelector('i').classList.toggle('fa-chevron-down');
+                            heading.querySelector('i').classList.toggle('fa-chevron-up');
+                        });
+                    });
+                </script>
+
+                <style>
+                    .expandable-heading {
+                        cursor: pointer;
+                    }
+
+                    .expandable-heading i {
+                        margin-right: 5px;
+                    }
+
+                    .expandable-content {
+                        margin-left: 20px;
+                    }
+                </style>
+            </div>
+            <h4 class="stat-title">Employment Histories</h4>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="tl-icon">
+                        <i class="fa fa-address-card" aria-hidden="true"></i>
+
+                    </div>
+                    <p class="tl-duration">OCT 2017  -  present</p>
+                    <h5>Lexis Nexis Pvt. Ltd.<span> - Gurugram (Haryana)</span></h5>
+                    <p>-Position: Consulting Software Engineer</p>
+                    <p>-Website: <a style="color: brown;" href="http://www.lexisnexis.com">http://www.lexisnexis.com</a></p>
+                </div>
+                <div class="timeline-item">
+                    <div class="tl-icon">
+                        <i class="fa fa-address-card" aria-hidden="true"></i>
+                    </div>
+                    <p class="tl-duration">MAY 2016  - OCT 2017</p>
+                    <h5>Binary Semantics Ltd.<span> - Gurugram (Haryana)</span></h5>
+                    <p>-Position: Sr. System Analyst</p>
+                    <p>-Website: <a style="color: brown;" href="http://www.binarysementics.com">http://www.binarysementics.com</a></p>
+                </div>
+                <div class="timeline-item">
+                    <div class="tl-icon">
+                        <i class="fa fa-address-card" aria-hidden="true"></i>
+                    </div>
+                    <p class="tl-duration">FEB 2010 - MAY  2016.</p>
+                    <h5>EBC Pvt. Ltd.<span> - Lucknow (U.P.)</span></h5>
+                    <p>-Position: Sr. System Analyst</p>
+                    <p>-Website: <a style="color: brown;" href="http://ebc-india.com">http://ebc-india.com</a>; <a style="color: brown;" href="http://www.scconline.co.in/">http://www.scconline.co.in/</a></p>
+                </div>
+                <div class="timeline-item">
+                    <div class="tl-icon">
+                        <i class="fa fa-address-card" aria-hidden="true"></i>
+                    </div>
+                    <p class="tl-duration">JAN 2009 - FEB 2010</p>
+                    <h5>Aptara Pvt. Ltd.<span> - Delhi</span></h5>
+                    <p>-Position: XML Programmer</p>
+                    <p>-Website: <a style="color: brown;" href="http://aptara.corp.com">http://aptara.corp.com</a> </p>
+                </div>
+            </div>
+            <h4 class="stat-title">My Education</h4>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="tl-icon">
+                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                    </div>
+                    <p class="tl-duration">June 2014 - Sep 2016</p>
+                    <h5>MCA<span> - Sobhit University (Meerut- UP)</span></h5>
+                    <p>-Degree: IT</p>
+                    <p>-Grade: Good</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="tl-icon">
+                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                    </div>
+                    <p class="tl-duration">May 2007</p>
+                    <h5>Bsc(IT)<span> - KSOU (Karnataka)</span></h5>
+                    <p>-Degree: IT</p>
+                    <p>-Grade: Excellent</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="tl-icon">
+                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                    </div>
+                    <p class="tl-duration">Aug 2008</p>
+                    <h5>GNIIT<span> - NIIT (South Ex-2, Delhi)</span></h5>
+                    <p>-Degree: SE</p>
+                    <p>-Grade: Excellent</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="tl-icon">
+                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                    </div>
+                    <p class="tl-duration">2002 - 2004</p>
+                    <h5>Intermediate<span> - BBR Inter College (Khalilabad - UP)</span></h5>
+                    <p>-Higer Secondary: Science</p>
+                    <p>-Percentage: 52%</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="tl-icon">
+                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                    </div>
+                    <p class="tl-duration">2002 - 2002</p>
+                    <h5>Secondary School<span> - Mashkara Inter College (Gorakhpur - UP)</span></h5>
+                    <p>-Secondary School: Science</p>
+                    <p>-Percentage: 42%</p>
+                </div>
+            </div>
+        </section>
+        <section class="container" id="portfolio">
+            <div class="main-title">
+                <h2>My <span>Portfolio</span><span class="bg-text">My Work</span></h2>
+            </div>
+            <p class="port-text">
+                Here is some of my work that I've done in various programming languages.
+            </p>
+            <!-- Button to trigger the popup -->
+            <!-- Dialog for popup content -->
+           <!-- Dialog for popup content -->
+            <dialog class="popup-content">
+                <div class="popup-inner">
+                    <!-- Dynamic content will be inserted here using JavaScript -->
+                    <h2 id="popup-title">Welcome to the Popup!</h2>
+                    <div id="popup-description">This is the popup content. You can add your content here.</div>
+                    <button class="close-popup">Close</button>
+                </div>
+            </dialog>
+            <div class="portfolios">
+                <div class="portfolio-item" data-title="Data Scientist Project - 1">
+                    <div class="image">
+                        <img src="img/port1.png" alt="">
+                    </div>
+                    <div class="hidden-content">
+                        <p>This project is centered around the implementation of named entity recognition using Spacy.</p>
+                        <p>We have meticulously developed and fine-tuned our proprietary Spacy model for this initiative. The primary objective is to extract legislative information from cases, such as <b>[Indian Penal Code, Criminal Procedure Act 1990]</b>, and efficiently retrieve legal citations like <b>["[2010] 1 CLR 2000", "2005 1  AIR 200"]</b>.</p>
+                        <p>The application has been tailored to cater to legal cases in India, Malaysia, and Hong Kong. Our vision is to expand its global utility, allowing users to seamlessly access comprehensive details about legislation and citations with just one click.</p>
+                        <ol style="display: grid; margin-left: 120px;">
+                            <li><b>Legislation Extractor</b></li>
+                            <li><b>Citations Extractor</b></li>
+                        </ol>
+                        <div class="tl-icon">
+                            <p><i class="fa fa-cogs" aria-hidden="true"></i> <b>Tools/Lib. Used:</b> Spacy, Python, Matplot, NLTK, Sklearn and etc.</p>
+                            <p><i class="fa fa-eye" aria-hidden="true"></i> <b>Note:</b> The implementation of this AI project not only contributes to substantial cost savings but also ensures a level of accuracy that surpasses manual tagging methods.</p>
+                        </div>
+                        
+                    </div>
+                    <div class="hover-items" style="text-align: center;">
+                        <h3>Project Summary ...</h3>
+                        <p style="font-size: small;">It is Legislation and Citation extractor from legal cases like as <b>[Indian Penal Code, Criminal Procedure Act 1990]</b> and also extracting legal citation like as <b>["[2010] 1 CLR 2000", "2005 1  AIR 200"]</b></p>
+                        <div class="icons">
+                            <a href="#" class="icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="icon">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                        <br/>
+                        <button class="openPopup">More Details >></button>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-title="Data Scientist Project - 2">
+                    <div class="image">
+                        <img src="img/port2.png" alt="">
+                    </div>
+                    <div class="hidden-content">
+                        <h4>Headnote Extraction for Enhanced Case Analysis</h4>
+                        <p>Efficiently extracting headnotes from legal cases is pivotal for cost reduction and facilitating data-driven recommendations for editors. The initial phase of Practice Area extraction has been successfully completed.</p>
+                        <p>Employing a diverse range of AI methodologies, we have prioritized accuracy in our approach. At present, the LLM (Claude) model serves as our cornerstone for predicting headnotes.</p>
+                        <p>A comprehensive headnote generated by our system encompasses the following key elements from multiple paragraph:</p>
+                        <ol style="display: grid; margin-left: 120px;">
+                                <li><b>Taxnomy</b></p>
+                                <li><b>Keywords</b></p>
+                                <li><b>Legislation</b></p>
+                                <li><b>Facts</b></p>
+                                <li><b>Issues</b></p>
+                                <li><b>Reasioning</b></p>
+                                <li><b>Dispostion</b></p>
+                        </ol>
+                        <div class="tl-icon">
+                            <p><i class="fa fa-cogs" aria-hidden="true"></i> <b>Tools/Lib. Used:</b>Prompt Engineering, Gpt-3 with Claude, Bert, Machine Learning (SVM), Spacy, Python, Matplot, NLTK, Sklearn and etc.</p>
+                            <p style="font-size: smaller; color: red;"><i class="fa fa-eye" aria-hidden="true"></i> <b>Note:</b> Our commitment to providing nuanced and detailed headnotes aims to enhance the analytical capabilities of legal professionals and streamline the editorial process.</p>
+                        </div>
+
+                    </div>
+                    <div class="hover-items" style="text-align: center;">
+                        <h3>Project Summary ...</h3>
+                        <p style="font-size: small;">Legal headnote generated by our system encompasses [Taxnomy, Keywords, Legislation etc.] elements from multiple paragraph.</p>
+                        <div class="icons">
+                            <a href="#" class="icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="icon">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                        <br/>
+                        <button class="openPopup">More Details >></button>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-title="Data Scientist Project - 3">
+                    <div class="image">
+                        <img src="img/port3.png" alt="">
+                    </div>
+                    <div class="hidden-content">
+                        <h4>LexisNexis Styling</h4>
+                        <h5>Optimizing Legal document formatting through Advanced Processing</h5>
+                        <p>Within the framework of this project, a series of sophisticated processes are at play to elevate the quality of legal documents. Initially, court-provided PDF data is meticulously extracted and transposed into a structured Word document. Subsequently, our machine learning methodologies come into action to imbue these documents with our proprietary house styles.</p>
+                        <p>Utilizing Support Vector Machines (SVM) and Term Frequency-Inverse Document Frequency (Tfidf) techniques, we have achieved a commendable accuracy rate of at least 85%. Our ongoing endeavors include the integration of deep learning approaches to further refine and enhance the precision of our house styles.</p>
+                        <p>This strategic amalgamation of document extraction, machine learning, and advanced formatting techniques underscores our commitment to delivering legal documents of the highest caliber.</p>
+                        <div class="tl-icon">
+                            <p><i class="fa fa-cogs" aria-hidden="true"></i> <b>Tools/Lib. Used:</b>Prompt Engineering, Gpt-3 with Claude, Bert, Machine Learning (SVM), Spacy, Python, Matplot, NLTK, Sklearn and etc.</p>
+                            <p style="font-size: smaller; color: red;"><i class="fa fa-eye" aria-hidden="true"></i> <b>Note:</b> Our commitment to providing nuanced and detailed headnotes aims to enhance the house style capabilities of legal professionals and streamline the editorial process.</p>
+                        </div>
+
+                    </div>
+                    <div class="hover-items" style="text-align: center;">
+                        <h3>Project Summary ...</h3>
+                        <p style="font-size: small;">LexisNexis word doc House Styling, This strategic amalgamation of document extraction, machine learning, and advanced formatting techniques underscores our commitment to delivering legal documents.</p>
+                        <div class="icons">
+                            <a href="#" class="icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="icon">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                        <!-- Add a button to open the popup -->
+                        <br/>
+                        <button class="openPopup">More Details >></button>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-title="Project 4" data-description="Description for Project 1">
+                    <div class="image">
+                        <img src="img/port4.jpg" alt="">
+                    </div>
+                    <div class="hover-items">
+                        <h3>Project Source</h3>
+                        <div class="icons">
+                            <a href="#" class="icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="icon">
+                                <i class="fab fa-behance"></i>
+                            </a>
+                            <a href="#" class="icon">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-title="Project 5" data-description="Description for Project 1">
+                    <div class="image">
+                        <img src="img/port5.jpg" alt="">
+                    </div>
+                    <div class="hover-items">
+                        <h3>Project Source</h3>
+                        <div class="icons">
+                            <a href="#" class="icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="icon">
+                                <i class="fab fa-behance"></i>
+                            </a>
+                            <a href="#" class="icon">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-title="Project 6" data-description="Description for Project 1">
+                    <div class="image">
+                        <img src="img/port2.jpg" alt="">
+                    </div>
+                    <div class="hover-items">
+                        <h3>Project Source</h3>
+                        <div class="icons">
+                            <a href="#" class="icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="icon">
+                                <i class="fab fa-behance"></i>
+                            </a>
+                            <a href="#" class="icon">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-title="Project 7" data-description="Description for Project 1">
+                    <div class="image">
+                        <img src="img/port7.jpg" alt="">
+                    </div>
+                    <div class="hover-items">
+                        <h3>Project Source</h3>
+                        <div class="icons">
+                            <a href="#" class="icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="icon">
+                                <i class="fab fa-behance"></i>
+                            </a>
+                            <a href="#" class="icon">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <section class="container" id="blogs">
+            <div class="blogs-content">
+                <div class="main-title">
+                    <h2>My <span>Blogs</span><span class="bg-text">My Blogs</span></h2>
+                </div>
+                <div class="blogs">
+                    <div class="blog">
+                        <img src="img/port6.jpg" alt="">
+                        <div class="blog-text">
+                            <h4>
+                                How to Create Your Own Website
+                            </h4>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                                Doloribus natus voluptas, eos obcaecati recusandae amet?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog">
+                        <img src="img/blog1.jpg" alt="">
+                        <div class="blog-text">
+                            <h4>
+                                How to Become an Expert in Web Design
+                            </h4>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                                Doloribus natus voluptas, eos obcaecati recusandae amet?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog">
+                        <img src="img/blog2.jpg" alt="">
+                        <div class="blog-text">
+                            <h4>
+                                Become a Web Designer in 10 Days
+                            </h4>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                                Doloribus natus voluptas, eos obcaecati recusandae amet?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog">
+                        <img src="img/blog3.jpg" alt="">
+                        <div class="blog-text">
+                            <h4>
+                                Debbuging made easy with Web Inspector
+                            </h4>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                                Doloribus natus voluptas, eos obcaecati recusandae amet?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog">
+                        <img src="img/port1.jpg" alt="">
+                        <div class="blog-text">
+                            <h4>
+                                Get started with Web Design and UI Design
+                            </h4>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                                Doloribus natus voluptas, eos obcaecati recusandae amet?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog">
+                        <img src="img/port3.jpg" alt="">
+                        <div class="blog-text">
+                            <h4>
+                                This is what you need to know about Web Design
+                            </h4>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                                Doloribus natus voluptas, eos obcaecati recusandae amet?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <section class="container contact" id="contact">
+            <div class="contact-container">
+                <div class="main-title">
+                    <h2>Contact <span>Me</span><span class="bg-text">Contact</span></h2>
+                </div>
+                <div class="contact-content-con">
+                    <div class="left-contact">
+                        <h4>Contact me here</h4>
+                        <p>I'm a Consulting Software Engineer. I am a skilled and results-oriented Software Engineer with a strong foundation in Machine Learning, specializing in Netural Language Processing (NLP) with Machine Learning (ML), Deep Learning (DL) and Transformer architecture. With 4 years of experience in the field of Machine Learning and Deep Learning, I have successfully contributed to various projects, demonstrating expertise in designing and implementing scalable software solutions that leverage the power of Python, Java, React, .Net and XSLT for solving complex problems from past 8 years.                        </p>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <div class="icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Location</span>
+                                </div>
+                                <p>
+                                    : Faridabad, Haryana, India
+                                </p>
+                            </div>
+                            <div class="contact-item">
+                                <div class="icon">
+                                    <i class="fas fa-user-graduate"></i>
+                                    <span>Marital status</span>
+                                </div>
+                                <p>
+                                    <span>: Married</span>
+                                </p>
+                            </div>
+                            <div class="contact-item">
+                                <div class="icon">
+                                    <i class="fas fa-user-graduate"></i>
+                                    <span>Working experience</span>
+                                </div>
+                                <p>
+                                    <span>: 13 Years</span>
+                                </p>
+                            </div>
+                            <div class="contact-item">
+                                <div class="icon">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Email</span>
+                                </div>
+                                <p>
+                                    <span>: praveensingh.soft@gmail.com</span>
+                                </p>
+                            </div>
+                            <div class="contact-item">
+                                <div class="icon">
+                                    <i class="fas fa-user-graduate"></i>
+                                    <span>Education</span>
+                                </div>
+                                <p>
+                                    <span>: Sobhit University, (Meerut- UP)</span>
+                                </p>
+                            </div>
+                            
+
+                            <div class="contact-item">
+                                <div class="icon">
+                                    <i class="fas fa-user-graduate"></i>
+                                    <span>Mobile Number</span>
+                                </div>
+                                <p>
+                                    <span>: 08800225812</span>
+                                </p>
+                            </div>
+                            <div class="contact-item">
+                                <div class="icon">
+                                    <i class="fas fa-globe-africa"></i>
+                                    <span>Languages</span>
+                                </div>
+                                <p>
+                                    <span>: Hindi and English</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="contact-icons">
+                            <div class="contact-icon">
+                                <a href="www.facebook.com" target="_blank">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" target="_blank">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-contact">
+                        <form action="" class="contact-form">
+                            <div class="input-control i-c-2">
+                                <input type="text" required placeholder="YOUR NAME">
+                                <input type="email" required placeholder="YOUR EMAIL">
+                            </div>
+                            <div class="input-control">
+                                <input type="text" required placeholder="ENTER SUBJECT">
+                            </div>
+                            <div class="input-control">
+                                <textarea name="" id="" cols="15" rows="8" placeholder="Message Here..."></textarea>
+                            </div>
+                            <div class="submit-btn">
+                                <a href="#" class="main-btn">
+                                    <span class="btn-text">Download CV</span>
+                                    <span class="btn-icon"><i class="fas fa-download"></i></span>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="controls">
+        <div class="control active-btn" data-id="home" >
+            <i class="fas fa-home"></i>
+        </div>
+        <div class="control" data-id="about">
+            <i class="fas fa-user"></i>
+        </div>
+        <div class="control" data-id="portfolio">
+            <i class="fas fa-briefcase"></i>
+        </div>
+        <!-- <div class="control" data-id="blogs">
+            <i class="far fa-newspaper"></i>
+        </div> -->
+        <div class="control" data-id="contact">
+            <i class="fas fa-envelope-open"></i>
+        </div>
+    </div>
+    <div class="theme-btn">
+        <i class="fas fa-adjust"></i>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
